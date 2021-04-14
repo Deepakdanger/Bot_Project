@@ -12,7 +12,7 @@ class Joke
   end
 
   def joke_call
-    url = URI('https://geek-jokes.p.rapidapi.com/api?format=json')
+    url = URI('https://manatee-jokes.p.rapidapi.com/manatees/random')
 
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = true
@@ -20,7 +20,7 @@ class Joke
 
     request = Net::HTTP::Get.new(url)
     request['x-rapidapi-key'] = '074a87b56bmsh60e1cf8f06a4f4cp19bf61jsn0a432510ac80'
-    request['x-rapidapi-host'] = 'geek-jokes.p.rapidapi.com'
+    request['x-rapidapi-host'] = 'manatee-jokes.p.rapidapi.com'
 
     response = http.request(request)
     JSON.parse(response.body)

@@ -32,7 +32,7 @@ class Bot
         when 'joke'
           value = Joke.new
           final_joke = value.joke_call
-          bot.api.send_message(chat_id: message.chat.id, text: "Funny joke 😜: #{final_joke['joke']}\n 😂 🤣")
+          bot.api.send_message(chat_id: message.chat.id, text: "Funny joke 😜: #{final_joke['setup']}\n 😂 A: #{final_joke['punchline']} 🤣")
         when 'quote'
           val = Quote.new
           new_quote = val.quote_call
