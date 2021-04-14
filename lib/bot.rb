@@ -11,12 +11,12 @@ class Bot
         case message.text
         when 'hi','Hi','🤚','👋','✋','🖐'
           bot.api.send_message(chat_id: message.chat.id, text: "Hello, Welcome to 🕵🏻‍♂️ bot, If you are feeling down ,Let me Help you 🤪\n
-                 Press 
-                 'start' To know my Name\n
-                 'stop ' To stop me from teasing you\n
-                 'health' To check health\n
-                 'joke'  To get one good joke\n
-                 'quote' To get one quote for start your Day\n")
+            Press 
+            'start' => To know my Name\n
+            'stop ' => To stop me from teasing you\n
+            'health'=> To check health\n
+            'joke'  => To get one good joke\n
+            'quote' => To get one quote for start your Day\n")
         when 'start'
           bot.api.send_message(chat_id: message.chat.id, text: "Hello, My Name is TOBOOOOOOT")
         when 'stop'
