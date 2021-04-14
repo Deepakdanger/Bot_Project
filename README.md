@@ -35,7 +35,7 @@ $ ruby bin/main.rb
 
 # Search for
      
-     deep_tob_bot
+     @deep_tob_bot , Deep_bot
 
   
 Start the chat by saying 'hi','Hi','🤚','👋','✋','🖐'

@@ -1,5 +1,6 @@
 # rubocop:disable Metrics/CyclomaticComplexity
 # rubocop:disable Metrics/MethodLength
+# rubocop:disable Metrics/BlockLength
 # rubocop:disable Layout/LineLength
 
 require 'telegram/bot'
@@ -19,6 +20,7 @@ class Bot
             'start' => To know my Name\n
             'stop ' => To stop me from teasing you\n
             'health'=> To check health\n
+            'nice'or '👌' => To Thanks me\n
             'joke'  => To get one good joke\n
             'quote' => To get one quote for start your Day\n")
         when 'start'
@@ -36,8 +38,9 @@ class Bot
         when 'quote'
           val = Quote.new
           new_quote = val.quote_call
-          bot.api.send_message(chat_id: message.chat.id,
-                               text: "Today Motivational quote 😮: #{new_quote['quote']} \n Author :#{new_quote['author']}")
+          bot.api.send_message(chat_id: message.chat.id, text: "Today Motivational quote 😮: #{new_quote['quote']} \n Author :#{new_quote['author']}")
+        else
+          bot.api.send_message(chat_id: message.chat.id, text: "Sorry you put an invalid entry, 😱 \n you need to write 'hi' to see the Instruction📚")
         end
       end
     end
@@ -46,4 +49,5 @@ end
 
 # rubocop: enable Metrics/CyclomaticComplexity
 # rubocop: enable Metrics/MethodLength
+# rubocop: enable Metrics/BlockLength
 # rubocop: enable Layout/LineLength
