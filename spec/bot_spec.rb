@@ -16,13 +16,13 @@ end
 
 describe Quote do
   let(:val) { Quote.new }
-  describe 'quote_call method' do
+  describe 'quote1 method' do
     it 'return class array in response when send the json request' do
-      expect(val.quote_call.class).to eql(Hash)
+      expect(val.quote1.class).to eql(Hash)
     end
 
     it 'the length of the array should not be equal to zero' do
-      expect(val.quote_call.length).not_to eql(0)
+      expect(val.quote1.length).not_to eql(0)
     end
   end
 end

@@ -6,10 +6,17 @@ require 'json'
 require 'telegram/bot'
 
 class Quote
-  @quote1 = nil
+  attr_reader :quote2
+
   def initialize
-    @quote1 = quote_call
+    quote_call
   end
+
+  def quote1
+    quote_call
+  end
+
+  private
 
   def quote_call
     url = URI('https://quotes21.p.rapidapi.com/quote')

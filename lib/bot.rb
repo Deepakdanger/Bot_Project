@@ -37,7 +37,7 @@ class Bot
           bot.api.send_message(chat_id: message.chat.id, text: "Funny joke 😜: #{final_joke['setup']}\n 😂 A: #{final_joke['punchline']} 🤣")
         when 'quote'
           val = Quote.new
-          new_quote = val.quote_call
+          new_quote = val.quote1
           bot.api.send_message(chat_id: message.chat.id, text: "Today Motivational quote 😮: #{new_quote['quote']} \n Author :#{new_quote['author']}")
         else
           bot.api.send_message(chat_id: message.chat.id, text: "Sorry you put an invalid entry, 😱 \n you need to write 'hi' to see the Instruction📚")
