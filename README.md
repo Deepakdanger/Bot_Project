@@ -3,7 +3,7 @@
 I am introducing this telegram bot which can introduce himself when you say hi to him. This bot can send you inspirational quotes and funny jokes to you when you press certain commands and also instruct you if you press any wrong key. 
 
 
-![screenshot](./lib/Capture.PNG)
+![screenshot](./img/Capture.PNG)
 
 
 # Getting Started 🚀
@@ -19,13 +19,11 @@ From your command line, first clone the project:
 # Clone this repository
 $ git clone https://github.com/Deepakdanger/Bot_Project.git
 
-# Install the required gem file
-
-$ gem install telegram-bot-ruby
-$ bundle install
-
 # Go into the folder telegram_bot
 $ cd Bot_Project
+
+# Install the required gem file
+$ bundle install
 
 # In command prompt, run the following command
 $ ruby bin/main.rb
@@ -50,13 +48,8 @@ and enjoy by writing any commands and follows instruction
 From your command line, first clone the project:
 
 ```bash
-# Install the Rspec
-$ gem install rspec
 
-# Initialize the Rspec
-$ rspec --init
-
-# In command prompt, run the following command to test
+# In command prompt, run the this command to test
 $ rspec
 
 ```
